@@ -1,0 +1,40 @@
+#ast{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.ast-title{
+    align-self: center;
+    display: flex;
+}
+
+.node-type{
+    margin-left: 2rem;
+    margin-top: 1rem;
+    position: relative;
+    border-left: 1px dashed white;
+    max-width: 100%;
+}
+
+.node-type strong{
+    border: 1px solid white;
+    padding: 5px;
+}
+
+.node-value{
+    display: flex;
+    padding-left: 2rem;
+    margin-top: 1rem;
+}
+
+.node-value p{
+    padding: 5px;
+    font-style: italic;
+    border: 1px solid white;
+    text-overflow: ellipsis ;
+    max-width: 5rem;
+    overflow: hidden;
+    max-height: calc(1rem + 20px);
+}

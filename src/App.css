@@ -1,0 +1,18 @@
+@import url('./Ulitities/Css/const.css');
+
+html{
+  font-size: 20px;
+}
+
+body{
+  background-color: var(--bg-color);
+}
+
+.App{
+  max-width: 1920px;
+  width: 70%;
+  color: var(--content-text-color);
+  background-color: var(--section-color);
+  display: flex;
+  justify-content: center;
+}

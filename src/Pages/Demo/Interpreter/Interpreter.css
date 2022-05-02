@@ -1,0 +1,12 @@
+.interpreter-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.interpreter-banner{
+    width: 80%;
+    margin: 4rem 0rem;
+}

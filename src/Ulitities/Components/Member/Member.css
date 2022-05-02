@@ -1,0 +1,26 @@
+.member{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member__avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.member__social_link{
+    display: flex;
+}
+
+.member__link--fb{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.member__link--github{
+    width: 20px;
+    height: 20px;
+}

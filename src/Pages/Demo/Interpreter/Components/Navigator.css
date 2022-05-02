@@ -1,0 +1,25 @@
+.nav-section{
+    display: flex;
+    position: fixed;
+    width: 15%;
+    left: 0;
+    top: 0;
+    max-height: 100vh;
+    overflow-x: hidden;
+    font-size: 0.8rem;
+}
+
+.nav-section ul{
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.h2-ancor{
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.nav-section a{
+    text-decoration: none;
+    color: var(--content-text-color);
+}

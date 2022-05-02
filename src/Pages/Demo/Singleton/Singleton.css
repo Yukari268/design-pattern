@@ -1,0 +1,9 @@
+.singleton-section {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.singleton-section-title {
+  font-size: 3rem;
+}

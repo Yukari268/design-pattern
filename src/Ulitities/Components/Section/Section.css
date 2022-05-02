@@ -1,0 +1,11 @@
+@import url("../../Css/const.css");
+
+.section {
+  border-bottom: 3px solid rgb(47, 47, 47);
+  background-color: var(--section-color);
+  width: 90%;
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

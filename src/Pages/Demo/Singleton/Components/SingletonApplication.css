@@ -1,0 +1,51 @@
+.inputbox{
+    resize: none;
+    height: 8rem;
+}
+
+.button{
+
+}
+
+.singleton-application{
+    width: 80%;
+}
+
+.singleton-application-name {
+    font-size: 2rem;
+}
+
+.singleton-application-section-1, .singleton-application-section-2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 1rem;
+}
+
+.singleton-application-section-1-button,.singleton-application-section-2-button{
+    height: 2rem;
+    width: 5rem;
+    border-radius: 0;
+}
+
+.singleton-application-section-1-button{
+    background-color: crimson;
+    color: azure;
+}
+
+.singleton-application-section-2-button{
+    background-color: burlywood;
+    color: azure;
+}
+
+#textCanvas{
+    /* display: none; */
+    height: fit-content;
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+#image{
+}
