@@ -13,9 +13,9 @@ const RecentSection = () => {
           title="Interpreter"
         ></Project>
         <Project
-          link="iterator"
-          imgUrl="iterator.png"
-          title="Iterator"
+          link="prototype"
+          imgUrl="prototype.png"
+          title="Prototype"
         ></Project>
       </div>
     </Section>
