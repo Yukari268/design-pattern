@@ -13,10 +13,9 @@ import { TemplateMethod }from "./Pages/Demo/TemplateMethod/TemplateMethod";
 
 function App() {
   return (
-    <Router>
       <div className="App">
         <Routes>
-          <Route path='/' element={<HomePage/>}></Route>
+          <Route path='/design-pattern' element={<HomePage/>}></Route>
           <Route path='/interpreter' element={<Interpreter/>}></Route>
           <Route path='/prototype' element={<Prototype/>}></Route>
           <Route path='/singleton' element={<Singleton/>}></Route>
@@ -27,7 +26,6 @@ function App() {
           <Route path='/template_method' element={<TemplateMethod/>}></Route>
         </Routes>
       </div>
-    </Router>
     // <HomePage></HomePage>
   );
 }
