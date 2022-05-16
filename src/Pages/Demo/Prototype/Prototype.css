@@ -1,0 +1,12 @@
+.prototype-section{
+    width: 80%;
+}
+
+.predefined-avatar{
+    margin-top: 2rem;
+}
+
+.predefined-avatar-container{
+    display: flex;
+    gap: 1rem;
+}

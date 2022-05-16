@@ -1,0 +1,32 @@
+.clock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clock--name{
+    font-size: 2rem;
+}
+
+.clock--time{
+    border: 2px solid white;
+    padding: 0.5rem 1rem  ;
+    justify-self: center;
+    display: flex;
+    font-size: 3rem;
+    box-sizing: border-box;
+}
+
+.clock--operation{
+    display: flex;
+    width: 100%;
+}
+
+.button-setting, .button-delete{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    border: 2px solid white;
+
+}
+
