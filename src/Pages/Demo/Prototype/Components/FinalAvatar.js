@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Stage, Layer, Rect, Text, Ellipse, Circle } from "react-konva";
+import { Stage, Layer, Rect, Text, Ellipse, Circle , Image} from "react-konva";
 import "./FinalAvatar.css";
 
 const DownloadButton = (props) => {
@@ -32,7 +32,7 @@ const FinalAvatar = (props) => {
       <div className="user-input-section">
         <Stage width={170} height={170}>
           <Layer ref={canvasRef}>
-            <Rect x={0} y={0} width={170} height={170} fill="white" />
+            <Image x={0} y={0} width={170} height={170} image={props.avatar.themeImage}/>
             <Ellipse
               x={170 / 2}
               y={170}

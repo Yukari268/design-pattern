@@ -1,6 +1,16 @@
+.recent-section{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/src/Ulitities/Assets/welcomebg.png') no-repeat center center;
+    background-size: cover;
+    filter: blur(0.3rem);
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
 .projects_container{
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
     margin-top: 1rem;
 }

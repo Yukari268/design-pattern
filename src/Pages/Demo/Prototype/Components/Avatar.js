@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stage, Layer, Rect, Text, Ellipse, Circle } from 'react-konva';
+import { Stage, Layer, Image, Text, Ellipse, Circle } from 'react-konva';
 
 const Avatar = (props) => {
   return (
@@ -8,12 +8,12 @@ const Avatar = (props) => {
         props.setSource(newCurrentAvatar);
     }}>
         <Layer>
-          <Rect
+          <Image
             x={0}
             y={0}
             width={170}
             height={170}
-            fill='white'
+            image={props.avatar.themeImage}
           />
           <Ellipse
             x = {170/2}

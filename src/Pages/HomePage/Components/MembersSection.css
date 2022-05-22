@@ -1,6 +1,18 @@
+.member-section{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/src/Ulitities/Assets/welcomebg.png') no-repeat center center;
+    background-size: cover;
+    filter: blur(0.3rem);
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+}
+
 .members{
     display: flex;
     justify-content: space-evenly;
-    width: 80%;
+    width: 100%;
     flex-wrap: wrap;
+    
 }

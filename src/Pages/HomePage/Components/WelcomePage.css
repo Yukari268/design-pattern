@@ -1,0 +1,59 @@
+.welcome-page{
+    height: 100vh;
+    width: 100%;
+
+    position: relative;
+}
+
+.welcome-bg{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/src/Ulitities/Assets/welcomebg.png') no-repeat center center;
+    background-size: cover;
+    filter: blur(0.3rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.project-nav{
+    position: relative;
+    max-width: 70%;
+    top: 15%;
+    left: 20%;
+    display: flex;
+}
+
+.project-nav >img{
+    width: 35%;
+}
+
+.project-nav-list{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    list-style: none;
+    padding-left: 10rem;
+}
+
+.project-nav-list >li{
+    padding-top: 2rem;
+}
+
+.project-nav-list a{
+    font-size: 2rem;
+    filter: blur(0.1rem);
+}
+
+.project-nav-list .active{
+    filter: blur(0);
+    border-bottom: 3px solid orange;
+}
+
+.project-nav-list a:hover{
+    font-size: 2rem;
+    filter: blur(0);
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+    border-bottom: 3px solid orange;
+}

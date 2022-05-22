@@ -6,11 +6,13 @@ html{
 
 body{
   background-color: var(--bg-color);
+  transform: translate3d(0px, 0px, 0px);
+  transition: all 700ms ease;
 }
 
 .App{
   max-width: 1920px;
-  width: 70%;
+  width: 100%;
   color: var(--content-text-color);
   background-color: var(--section-color);
   display: flex;

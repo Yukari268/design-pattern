@@ -5,7 +5,7 @@ import Project from "../../../Ulitities/Components/Project/Project";
 
 const AllProjectSection = () => {
   return (
-    <Section>
+    <div className="all-project-section">
       <h2>TOÀN BỘ DỰ ÁN</h2>
       <div className="projects_container">
         <Project
@@ -49,7 +49,7 @@ const AllProjectSection = () => {
           title="Template Method"
         ></Project>
       </div>
-    </Section>
+    </div>
   );
 };
 

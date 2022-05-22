@@ -5,7 +5,7 @@ import Member from "../../../Ulitities/Components/Member/Member";
 
 const MembersSection = () => {
   return (
-    <Section>
+    <div className="member-section">
       <h2>THÀNH VIÊN TRONG NHÓM</h2>
       <div className="members">
         <Member
@@ -23,7 +23,7 @@ const MembersSection = () => {
           github_link=""
         ></Member>
       </div>
-    </Section>
+    </div>
   );
 };
 
