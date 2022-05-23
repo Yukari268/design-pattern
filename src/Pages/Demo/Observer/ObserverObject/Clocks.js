@@ -1,8 +1,15 @@
-export class alarmClock {
-  constructor(date, time, type) {
+class clockTemplate {
+  isDue(){};
+}
+
+
+export class alarmClock extends clockTemplate {
+  constructor(date, time, type, title) {
+    super();
     this.date = date;
     this.time = time;
     this.type = type;
+    this.title = title;
   }
 
   subscribers = [];
@@ -41,8 +48,9 @@ export class alarmClock {
   };
 }
 
-export class countDownClock {
-  constructor(hour, minute, second, type) {
+export class countDownClock extends clockTemplate {
+  constructor(hour, minute, second, type, title) {
+    super();
     const MINUTE_TO_SECOND = 60;
     const HOUR_TO_SECOND = 3600;
     const totalTime =
@@ -51,16 +59,17 @@ export class countDownClock {
     this.totalMinute =
       (totalTime - (totalTime % MINUTE_TO_SECOND)) / MINUTE_TO_SECOND;
     this.type = type;
+    this.title = title;
+    this.subscribers = [];
   }
 
-  subscribers = [];
 
   subscribe = (s) => {
-    this.subscribers.add(s);
+    this.subscribers.push(s);
   };
 
   unsubscribe = (s) => {
-    this.subscribers.remove(s);
+    this.subscribers= this.subscribers.filter(item => item !== s);
   };
 
   notifySubscribe = () => {
@@ -78,6 +87,7 @@ export class countDownClock {
 
   alarm = () => {
     if (this.isDue()) {
+      console.log(this.subscribers)
       this.notifySubscribe();
     }
   };

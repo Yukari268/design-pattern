@@ -2,26 +2,37 @@ import React, { useRef, useState } from "react";
 import AlarmClock from "./AlarmClock";
 import CountDownClock from "./CountDownClock";
 import {alarmClock, countDownClock} from "../ObserverObject/Clocks"
+import User from "../../Singleton/SingletonObject/User";
+
 
 const ObserverApplication = () => {
   const [type, setType] = useState("countdown");
   const [clocks, setClocks] = useState([]);
-  const hourRef = useRef(null);
-  const minuteRef = useRef(null);
-  const secondRef = useRef(null);
-  const dateRef = useRef(null);
-  const timeRef = useRef(null);
+  const hourRef = useRef("");
+  const minuteRef = useRef("");
+  const secondRef = useRef("");
+  const dateRef = useRef("");
+  const timeRef = useRef("");
+  const countdownContentRef = useRef("");
+  const alarmContentRef = useRef("");
 
   const AddClock = (e) => {
-    console.log(clocks);
     if (type == "alarm") {
-      setClocks((prevClocks) => {
-        return [...prevClocks,new alarmClock(dateRef.current.value, timeRef.current.value, type)]
-      })
+      if (dateRef.current.value && timeRef.current.value && alarmContentRef.current.value) 
+      {  setClocks((prevClocks) => {
+          const newAlarm = new alarmClock(dateRef.current.value, timeRef.current.value, type,alarmContentRef.current.value)
+          newAlarm.subscribe(User.getUser());
+          return [...prevClocks,newAlarm]
+        })
+      }
     } else if (type == "countdown") {
-      setClocks((prevClocks) => {
-        return [...prevClocks, new countDownClock(hourRef.current.value, minuteRef.current.value, secondRef.current.value, type)]
+      if (hourRef.current.value  && minuteRef.current.value && secondRef.current.value && countdownContentRef.current.value)
+      {setClocks((prevClocks) => {
+        const newAlarm = new countDownClock(hourRef.current.value, minuteRef.current.value, secondRef.current.value, type, countdownContentRef.current.value);
+        newAlarm.subscribe(User.getUser());
+        return [...prevClocks,newAlarm ]
       } )
+    }
     }
   };
 
@@ -46,6 +57,8 @@ const ObserverApplication = () => {
           <input id="minute" name="minute" ref={minuteRef}></input>
           <label htmlFor="second">Second</label>
           <input id="second" name="second" ref={secondRef}></input>
+          <label htmlFor="cd-content">Content</label>
+          <input id="cd-content" name="cd-content" ref={countdownContentRef}></input>
         </div>
       )}
       {type == "alarm" && (
@@ -54,6 +67,8 @@ const ObserverApplication = () => {
           <input id="date" type="date" name="date" ref={dateRef}></input>
           <label htmlFor="time">Time</label>
           <input id="time" type="time" name="time" ref={timeRef}></input>
+          <label htmlFor="a-content">Time</label>
+          <input id="a-content" type="text" name="a-content" ref={alarmContentRef}></input>
         </div>
       )}
       <div className="button-add" onClick={AddClock}>
@@ -62,10 +77,10 @@ const ObserverApplication = () => {
       </div>
       {Array.from(clocks).map((element) => {
         if (element.type == "countdown"){
-          return <CountDownClock></CountDownClock>;
+          return <CountDownClock clock={element}></CountDownClock>;
         }
         if (element.type == "alarm") 
-          return <AlarmClock></AlarmClock>;
+          return <AlarmClock clock={element}></AlarmClock>;
       })}
     </div>
   );
