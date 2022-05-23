@@ -9,7 +9,7 @@ const RecentSection = () => {
       <div className="recent-section-bg"></div>
       <div className="recent-section-content">
         <div className="typo">
-          MOST <p className="no-fill">RECENTLY</p> PROJECT
+          MOST <p className="no-fill">RECENT</p> PROJECT
         </div>
         <img className="project-img-recent" src={require("../../../Ulitities/Assets/simple_clock.png")}/>
         <div className="introduction">
