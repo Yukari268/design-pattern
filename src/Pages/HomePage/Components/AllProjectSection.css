@@ -1,12 +1,53 @@
-.projects_container{
-    display: flex;
-    flex-basis: 1 1 1;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .all-project-section{
     width: 100%;
     height: 100vh;
+    position: relative;
 }
 
+.all-project-section-bg{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/src/Ulitities/Assets/welcomebg.png') no-repeat center center;
+    background-size: cover;
+    filter: blur(0.3rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.all-project-section-content{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+
+.project-list{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    cursor: grab;
+    overflow: auto;
+}
+
+.title{
+    display: flex;
+    gap: 1rem;
+    font-size: 3rem;
+}
+
+.practical-section, .theory-section{
+    width: calc(100% - 4rem);
+    display: flex;
+    flex-direction: column;
+}
+
+.practical-section-title, .theory-section-title{
+    font-size: 2rem;
+    margin-left: 4rem;
+    border-bottom: 2px solid white;
+}

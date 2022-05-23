@@ -1,16 +1,66 @@
 .recent-section{
     width: 100%;
     height: 100vh;
+    position: relative;
+}
+
+.recent-section-bg{
+    width: 100%;
+    height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/src/Ulitities/Assets/welcomebg.png') no-repeat center center;
     background-size: cover;
     filter: blur(0.3rem);
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
+    z-index: 0;
 }
 
-.projects_container{
+.recent-section-content{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.typo{
+    font-size: 3rem;
+    display: flex;
+    max-width: 30%;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+.project-img-recent{
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.no-fill{
+    color: black;
+    text-shadow: /* Outline 1 */
+    -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000,  
+    -2px 0 0 #000000,
+    2px 0 0 #000000,
+    0 2px 0 #000000,
+    0 -2px 0 #000000, 
+    /* Outline 2 */
+    -2px -2px 0 #ffffff,
+    2px -2px 0 #ffffff,
+    -2px 2px 0 #ffffff,
+    2px 2px 0 #ffffff,  
+    -3px 0 0 #ffffff,
+    3px 0 0 #ffffff,
+    0 3px 0 #ffffff,
+    0 -3px 0 #ffffff;
+}
+
+.title-recent{
+    font-size: 2rem;
 }

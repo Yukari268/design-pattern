@@ -1,20 +1,45 @@
 @import url("../../Css/const.css");
 
 .project{
-    display: flex;
+    display: inline-flex;
+    min-width: 500px;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin: 0 5%;
     margin-top: 1rem;
+    background: rgba(230, 230, 230, 0.1);
+    padding: 1rem 1.5rem;
+    height: 13rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.project__img{
-    width: 150px;
-    height: 150px;
+.project-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-img{
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
 }
 
-.project__name{
-    font-size: 2rem;
+.project-name{
+    margin-left: 1rem;
+    font-size: 1.5rem;
     color: var(--content-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-description{
+    margin-top: 1.2rem;
+}
+
+.project-redirect{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0.3rem 1rem;
+    margin-top: auto;
 }

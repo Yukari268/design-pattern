@@ -1,0 +1,13 @@
+.tag{
+    border-radius:  1.2rem;
+    display: inline-block;
+    padding: 0.1rem 0.4rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+}
+
+.description{
+    margin-top: 1rem;
+}
+
