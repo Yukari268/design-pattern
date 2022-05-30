@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Avatar.css";
 import { Stage, Layer, Image, Ellipse, Circle } from 'react-konva';
 
 const Avatar = (props) => {
@@ -6,7 +7,7 @@ const Avatar = (props) => {
     <Stage width='170' height='170' onClick={() => {
         const newCurrentAvatar = props.avatar.clone();
         props.setSource(newCurrentAvatar);
-    }}>
+    }}> 
         <Layer>
           <Image
             x={0}
@@ -18,14 +19,14 @@ const Avatar = (props) => {
           <Ellipse
             x = {170/2}
             y = {170}
-            radiusX={50}
-            radiusY={70}
+            radiusX={30}
+            radiusY={45}
             fill= {props.avatar.bodyColor}
           />
           <Circle 
             x = {170/2}
-            y = {170/2}
-            radius={50}
+            y = {200/2}
+            radius={40}
             fill= {props.avatar.skinColor}
           />
         </Layer>

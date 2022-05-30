@@ -1,0 +1,4 @@
+.avatar:hover{
+    border: 10px solid black ;
+    cursor: pointer;
+}

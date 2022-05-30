@@ -17,20 +17,20 @@ const ObserverApplication = () => {
   const alarmContentRef = useRef("");
 
   const AddClock = (e) => {
-    if (type == "alarm") {
+    if (type === "alarm") {
       if (dateRef.current.value && timeRef.current.value && alarmContentRef.current.value) 
       {  setClocks((prevClocks) => {
-          const newAlarm = new alarmClock(dateRef.current.value, timeRef.current.value, type,alarmContentRef.current.value)
-          newAlarm.subscribe(User.getUser());
-          return [...prevClocks,newAlarm]
+          const newClock = new alarmClock(dateRef.current.value, timeRef.current.value, type,alarmContentRef.current.value)
+          newClock.subscribe(User.getUser());
+          return [...prevClocks,newClock]
         })
       }
-    } else if (type == "countdown") {
+    } else if (type === "countdown") {
       if (hourRef.current.value  && minuteRef.current.value && secondRef.current.value && countdownContentRef.current.value)
       {setClocks((prevClocks) => {
-        const newAlarm = new countDownClock(hourRef.current.value, minuteRef.current.value, secondRef.current.value, type, countdownContentRef.current.value);
-        newAlarm.subscribe(User.getUser());
-        return [...prevClocks,newAlarm ]
+        const newClock = new countDownClock(hourRef.current.value, minuteRef.current.value, secondRef.current.value, type, countdownContentRef.current.value);
+        newClock.subscribe(User.getUser());
+        return [...prevClocks,newClock ]
       } )
     }
     }
@@ -67,7 +67,7 @@ const ObserverApplication = () => {
           <input id="date" type="date" name="date" ref={dateRef}></input>
           <label htmlFor="time">Time</label>
           <input id="time" type="time" name="time" ref={timeRef}></input>
-          <label htmlFor="a-content">Time</label>
+          <label htmlFor="a-content">Content</label>
           <input id="a-content" type="text" name="a-content" ref={alarmContentRef}></input>
         </div>
       )}

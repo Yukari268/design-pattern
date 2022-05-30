@@ -15,7 +15,7 @@ class Avatar {
 }
 
 export let predefinedAvatar = [
-    new Avatar("Red","BlanchedAlmond","Halloween"),
+    new Avatar("Yellow","BlanchedAlmond","Akatsuki2"),
     new Avatar("Pink","SeaShell","Default"),
     new Avatar("SlateBlue","BlanchedAlmond","Default"),
 ]

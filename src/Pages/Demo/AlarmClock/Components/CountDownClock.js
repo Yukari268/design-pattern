@@ -42,10 +42,6 @@ const CountDownClock = (props) => {
       <div className="clock--time">
         <p>{`${time.minute}:${time.second}`}</p>
       </div>
-      <div className="clock--operation">
-          <div className="button-setting">S</div>
-          <div className="button-delete">X</div>
-      </div>
       <div className="clock--name">{props.clock.title}</div>
     </div>
   );

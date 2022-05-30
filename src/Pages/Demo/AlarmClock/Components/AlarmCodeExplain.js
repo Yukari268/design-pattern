@@ -1,4 +1,49 @@
-class clockTemplate {
+import React from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { a11yDark, dark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+
+const AlarmCodeExplain = () => {
+  return (
+    <div className="code-explain-section">
+      <h1 id="explain">Code Explain</h1>
+
+      <p>Đầu tiên chúng ta sẽ nói về mẫu Singleton</p>
+      <SyntaxHighlighter language="javascript" style={a11yDark}>
+        {`class Subscriber{
+    update(){}
+}
+
+export default class User extends Subscriber{ 
+    static instance = null;
+
+    constructor(){
+        super();
+    }
+
+    static getUser(){
+        if (this.instance == null){
+            this.instance = {
+                update: () => {
+                    this.instance.audio.src = require("../../../../Ulitities/Assets/Sound/alarm_clock.mp3")
+                    this.instance.audio.play()
+                },
+                audio: document.createElement("AUDIO")
+            };
+            return this.instance;
+        }
+        return this.instance;
+    }
+
+    static update(){
+        this.instance.audio.src = require("../../../../Ulitities/Assets/Sound/alarm_clock.mp3")
+        this.instance.audio.play()
+    }
+}`}
+      </SyntaxHighlighter>
+
+      <p>Tiếp đến chúng ta sẽ nói đến mẫu Observer và TemplateMethod</p>
+      <SyntaxHighlighter language="javascript" style={a11yDark}>
+        {`class clockTemplate {
   isDue(){};
 }
 
@@ -97,3 +142,16 @@ export class countDownClock extends clockTemplate {
   };
 }
 
+`}
+      </SyntaxHighlighter>
+
+      <p>Cuối cùng chúng ta sẽ nói đến mẫu Mediator</p>
+      <SyntaxHighlighter language="javascript" style={a11yDark}>
+        {`
+        `}
+      </SyntaxHighlighter>
+    </div>
+  );
+};
+
+export default AlarmCodeExplain;

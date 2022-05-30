@@ -36,19 +36,19 @@ const FinalAvatar = (props) => {
             <Ellipse
               x={170 / 2}
               y={170}
-              radiusX={50}
-              radiusY={70}
+              radiusX={30}
+              radiusY={45}
               fill={props.avatar.bodyColor}
             />
             <Circle
               x={170 / 2}
-              y={170 / 2}
-              radius={50}
+              y={200 / 2}
+              radius={40}
               fill={props.avatar.skinColor}
             />
             <Text
-              x={170 / 2 - 20}
-              y={170 / 2 - 10}
+              x={170 / 2 - 24}
+              y={200 / 2 - 12}
               text= {name}
               fill="black"
               fontSize={32}
