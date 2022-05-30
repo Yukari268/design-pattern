@@ -1,4 +1,4 @@
-
+import ThemeFactory from "../Flyweight/ThemeFactory"
 
 class Avatar {
     constructor(bodyColor, skinColor, themeImage) {

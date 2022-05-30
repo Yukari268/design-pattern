@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./PrototypeApplication.css"
-import { predefinedAvatar } from "../PrototypeObject/PredefinedAvatar";
+import { predefinedAvatar } from "../Prototype/PredefinedAvatar";
 import Avatar from "./Avatar";
 import FinalAvatar from "./FinalAvatar"
 

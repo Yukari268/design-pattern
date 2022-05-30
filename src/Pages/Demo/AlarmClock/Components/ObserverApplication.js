@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import AlarmClock from "./AlarmClock";
 import CountDownClock from "./CountDownClock";
 import {alarmClock, countDownClock} from "../Observer_TemplateMethod/Clocks"
-import User from "../../Singleton/SingletonObject/User";
+import User from "../Singleton/User";
 
 
 const ObserverApplication = () => {

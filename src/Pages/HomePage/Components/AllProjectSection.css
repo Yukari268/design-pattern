@@ -2,6 +2,7 @@
     width: 100%;
     height: 100vh;
     position: relative;
+    overflow-y: auto;
 }
 
 .all-project-section-bg{
@@ -32,6 +33,7 @@
     flex-wrap: nowrap;
     cursor: grab;
     overflow: auto;
+    flex:1;
 }
 
 .title{
@@ -44,6 +46,7 @@
     width: calc(100% - 4rem);
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 .practical-section-title, .theory-section-title{
