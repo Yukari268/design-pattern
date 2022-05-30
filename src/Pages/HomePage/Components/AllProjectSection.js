@@ -19,24 +19,34 @@ const AllProjectSection = () => {
               name="Simple Alarm Clocks"
               tags={["Singleton", "Observer", "Mediator", "Template Method"]}
               description="A demo for Observer, Singleton, Mediator, Template Method using Javascript"
+              path="/simple-clock"
             ></Project>
             <Project
               img_link="markdown"
               name="Markdown Converter"
               tags={["Interpreter"]}
               description="A demo for Interpreter using Javascript and Open Source Library"
+              path="/markdown-converter"
             ></Project>
             <Project
               img_link="avatar_creator"
               name="Simple Avatar Creator"
               tags={["Prototype","Iterator","Flyweight"]}
               description="A demo for Prototype, Iterator, Flyweight using Javascript and Open Source Library"
+              path="/avatar-creator"
             ></Project>
           </ScrollContainer>
         </div>
         <div className="theory-section">
           <div className="theory-section-title">Theory</div>
-          <div className="project-list"></div>
+          <div className="project-list">
+          <Project
+              img_link="word"
+              name="Design Pattern Report Word"
+              tags={["Prototype","Iterator","Flyweight","Interpreter","Singleton", "Observer", "Mediator", "Template Method"]}
+              description="A report about 8 design patterns in NodeJS wrote by us"
+            ></Project>
+          </div>
         </div>
       </div>
     </div>

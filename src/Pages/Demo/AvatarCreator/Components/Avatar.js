@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stage, Layer, Image, Text, Ellipse, Circle } from 'react-konva';
+import { Stage, Layer, Image, Ellipse, Circle } from 'react-konva';
 
 const Avatar = (props) => {
   return (

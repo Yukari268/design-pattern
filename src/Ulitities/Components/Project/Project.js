@@ -1,8 +1,16 @@
 import React from "react";
 import "./Project.css";
 import Tag from "../../../Pages/HomePage/Components/Tag";
+import { useNavigate } from "react-router-dom";
 
 const Project = (props) => {
+
+  let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    let path = props.path; 
+    navigate(path);
+  }
+
   return (
     <div className="project">
       <div className="project-header">
@@ -17,7 +25,7 @@ const Project = (props) => {
       <div className="project-description">
             {props.description}
       </div>
-      <div className="project-redirect">More</div>
+      <div className="project-redirect" onClick={routeChange}>More</div>
     </div>
   );
 };

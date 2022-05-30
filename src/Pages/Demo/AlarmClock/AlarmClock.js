@@ -1,7 +1,7 @@
 import React from 'react'
 import ObserverApplication from './Components/ObserverApplication'
 
-export const Observer = () => {
+export default  AlarmClock = () => {
   return (
     <ObserverApplication></ObserverApplication>
   )
